@@ -5,7 +5,7 @@ $colorTopGradient: #eff0f8;
 $colorBottomGradient: #ffffff;
 $colorTitle: #495099;
 $colorTitileFirst: #314efe;
-$colorText: #abacaf;
+$colorText: #858fcc;
 $colorBtn: #ffab02;
 $font: Arial, Helvetica, sans-serif;
 
@@ -60,11 +60,14 @@ body {
     &__content {
         position: relative;
         display: flex;
-        width: 90%;
+        width: 95%;
         height: auto;
-        margin: 2% 5% auto 5%;
+        margin: 2% 2% auto 2%;
         border: solid 2px black;
         .page__welcome{
+            flex-basis: 50%;
+            align-self: center;
+            border: solid 1px red;
             &-tag {
                 color: $colorText;
                 font-size: 12px;
@@ -90,5 +93,57 @@ body {
                 }
             }
         }
+    }
+    &__description {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        ._box {
+            height: 180px;
+            width: 230px;
+            background-color: white;
+            border: 1px solid grey;
+            border-radius: 2px;
+            margin: 10px;
+            padding: 20px;
+            .box__title {
+                color: $colorTitle;
+                line-height: 30px;
+                margin-bottom: 2%;
+            }
+            .box__text {
+                margin-top: 0;
+                color: $colorText;
+            }
+        }
+        .material-icons {
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .page__box-1 {
+            .material-icons {
+                background-color: #bbdefb;
+                color: #1e88e5;
+            }
+        }
+        .page__box-2 {
+            .material-icons {
+                background-color:  #c8e6c9;
+                color: #5eae62;
+            }
+        }
+        .page__box-3 {
+            .material-icons {
+                background-color:  #fff9c4;
+                color: #f9a825;
+            }
+        }
+        .page__box-4 {
+            .material-icons {
+                background-color:  #e1bee7;
+                color: #8d25aa;
+            }
+        }
+
     }
 }

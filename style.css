@@ -47,13 +47,18 @@ body {
 .page__content {
   position: relative;
   display: flex;
-  width: 90%;
+  width: 95%;
   height: auto;
-  margin: 2% 5% auto 5%;
+  margin: 2% 2% auto 2%;
   border: solid 2px black;
 }
+.page__content .page__welcome {
+  flex-basis: 50%;
+  align-self: center;
+  border: solid 1px red;
+}
 .page__content .page__welcome-tag {
-  color: #abacaf;
+  color: #858fcc;
   font-size: 12px;
 }
 .page__content .page__welcome-title {
@@ -64,7 +69,7 @@ body {
   color: #314efe;
 }
 .page__content .page__welcome-text {
-  color: #abacaf;
+  color: #858fcc;
 }
 .page__content .page__welcome-btn {
   color: #fff;
@@ -75,4 +80,47 @@ body {
 }
 .page__content .page__welcome-btn:hover {
   cursor: pointer;
+}
+.page__description {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
+.page__description ._box {
+  height: 180px;
+  width: 230px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 2px;
+  margin: 10px;
+  padding: 20px;
+}
+.page__description ._box .box__title {
+  color: #495099;
+  line-height: 30px;
+  margin-bottom: 2%;
+}
+.page__description ._box .box__text {
+  margin-top: 0;
+  color: #858fcc;
+}
+.page__description .material-icons {
+  padding: 5px;
+  border-radius: 4px;
+}
+.page__description .page__box-1 .material-icons {
+  background-color: #bbdefb;
+  color: #1e88e5;
+}
+.page__description .page__box-2 .material-icons {
+  background-color: #c8e6c9;
+  color: #5eae62;
+}
+.page__description .page__box-3 .material-icons {
+  background-color: #fff9c4;
+  color: #f9a825;
+}
+.page__description .page__box-4 .material-icons {
+  background-color: #e1bee7;
+  color: #8d25aa;
 }/*# sourceMappingURL=style.css.map */
