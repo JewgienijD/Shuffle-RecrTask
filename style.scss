@@ -1,7 +1,16 @@
 
+//VARIABLES
 $pageGradient: linear-gradient(to top, #fff, #f1f1fa);
 $colorTopGradient: #eff0f8;
 $colorBottomGradient: #ffffff;
+$colorTitle: #495099;
+$colorTitileFirst: #314efe;
+$colorText: #abacaf;
+$colorBtn: #ffab02;
+$font: Arial, Helvetica, sans-serif;
+
+//BREAKPOINTS
+$md1: 757.98;
 
 body {
     margin: 0;
@@ -9,14 +18,13 @@ body {
     box-sizing: border-box;
     background: $pageGradient;
     background-attachment: fixed;
+    font-family: $font;
 }
 
 .page {
     width: 100%;
     height: 100%;
-    display: flex;
     &__background {
-        z-index: 1;
         width: 100%;
         height: 100%;
         &-square {
@@ -47,6 +55,40 @@ body {
             position: absolute;
             right: 15%;
             top: 30%;
+        }
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: 2% 5% auto 5%;
+        border: solid 2px black;
+        .page__welcome{
+            &-tag {
+                color: $colorText;
+                font-size: 12px;
+            }
+            &-title {
+                color: $colorTitle;
+                margin-top: 0;
+                #first {
+                    color: $colorTitileFirst;
+                }
+            }
+            &-text {
+                color: $colorText;
+            }
+            &-btn {
+                color: #fff;
+                background-color: $colorBtn;
+                border: none;
+                padding: 8px;
+                border-radius: 4px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

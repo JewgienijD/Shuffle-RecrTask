@@ -4,15 +4,14 @@ body {
   box-sizing: border-box;
   background: linear-gradient(to top, #fff, #f1f1fa);
   background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .page {
   width: 100%;
   height: 100%;
-  display: flex;
 }
 .page__background {
-  z-index: 1;
   width: 100%;
   height: 100%;
 }
@@ -44,4 +43,36 @@ body {
   position: absolute;
   right: 15%;
   top: 30%;
+}
+.page__content {
+  position: relative;
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: 2% 5% auto 5%;
+  border: solid 2px black;
+}
+.page__content .page__welcome-tag {
+  color: #abacaf;
+  font-size: 12px;
+}
+.page__content .page__welcome-title {
+  color: #495099;
+  margin-top: 0;
+}
+.page__content .page__welcome-title #first {
+  color: #314efe;
+}
+.page__content .page__welcome-text {
+  color: #abacaf;
+}
+.page__content .page__welcome-btn {
+  color: #fff;
+  background-color: #ffab02;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+}
+.page__content .page__welcome-btn:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
