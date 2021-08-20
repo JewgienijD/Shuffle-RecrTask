@@ -27,6 +27,12 @@ body {
   left: 0;
   background: linear-gradient(to bottom, #e6e8f5, #ffffff);
 }
+@media (max-width: 480px) {
+  .page__background-square {
+    width: 53%;
+    height: 85%;
+  }
+}
 .page__background-triangle {
   width: 0;
   height: 0;
@@ -36,6 +42,16 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+}
+@media (max-width: 768px) {
+  .page__background-triangle {
+    border-width: 0 200px 150px 0;
+  }
+}
+@media (max-width: 480px) {
+  .page__background-triangle {
+    display: none;
+  }
 }
 .page__background-circle {
   width: 15%;
@@ -47,6 +63,11 @@ body {
   right: 14%;
   top: 38%;
 }
+@media (max-width: 480px) {
+  .page__background-circle {
+    display: none;
+  }
+}
 .page__content {
   position: relative;
   display: flex;
@@ -54,16 +75,30 @@ body {
   width: 100vw;
   height: 100vh;
   padding: 1% 4%;
-  border: solid 2px black;
+}
+@media (max-width: 768px) {
+  .page__content {
+    height: 95%;
+  }
+}
+@media (max-width: 480px) {
+  .page__content {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .page__content .page__welcome {
   flex-basis: 50%;
   align-self: center;
-  border: solid 1px red;
 }
 .page__content .page__welcome-tag {
   color: #4780b9;
   font-size: 1em;
+}
+@media (max-width: 768px) {
+  .page__content .page__welcome-tag {
+    font-size: 0.5em;
+  }
 }
 .page__content .page__welcome-title {
   color: #182370;
@@ -74,10 +109,20 @@ body {
 .page__content .page__welcome-title #first {
   color: #284df8;
 }
+@media (max-width: 768px) {
+  .page__content .page__welcome-title {
+    font-size: 30px;
+  }
+}
 .page__content .page__welcome-text {
   color: #4780b9;
   line-height: 1.5em;
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .page__content .page__welcome-text {
+    font-size: 14px;
+  }
 }
 .page__content .page__welcome-btn {
   color: #fff;
@@ -90,22 +135,55 @@ body {
 .page__content .page__welcome-btn:hover {
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .page__content .page__welcome-btn {
+    font-size: 13px;
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .page__content .page__welcome-btn {
+    font-size: 13px;
+    width: 100%;
+  }
+}
 .page__description {
-  border: solid 1px green;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-basis: 50%;
   margin-left: 5%;
 }
+@media (max-width: 768px) {
+  .page__description {
+    margin-left: 0;
+    display: flex;
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  .page__description {
+    margin-top: 5%;
+  }
+}
 .page__description ._box {
-  flex-basis: 45%;
+  flex-basis: 40%;
   height: 20%;
   background-color: white;
   border: 1px solid grey;
   border-radius: 2px;
-  margin: 0 10px;
+  margin: 0 13px;
   padding: 20px;
+}
+@media (max-width: 768px) {
+  .page__description ._box {
+    flex-basis: 100%;
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: auto;
+    grid-template-areas: "icon title" "icon text";
+  }
 }
 .page__description ._box .box__title {
   color: #182370;
@@ -114,19 +192,58 @@ body {
   margin-top: 3%;
   font-size: 18px;
 }
+@media (max-width: 768px) {
+  .page__description ._box .box__title {
+    font-size: 12px;
+    padding: 0;
+    display: grid;
+    grid-area: "title";
+    padding: 0;
+    margin: 0 0 0 10px;
+  }
+}
 .page__description ._box .box__text {
   margin-top: 0;
   margin-bottom: 0;
   color: #4780b9;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
+}
+@media (max-width: 768px) {
+  .page__description ._box .box__text {
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0 0 0 10px;
+  }
+}
+@media (max-width: 768px) {
+  .page__description ._box {
+    height: auto;
+    padding: 10px;
+    display: grid;
+    grid-area: "text";
+  }
 }
 .page__description ._group2 {
   margin-top: 5%;
 }
+@media (max-width: 768px) {
+  .page__description ._group2 {
+    margin-top: 0;
+  }
+}
 .page__description .material-icons {
   padding: 10px;
   border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .page__description .material-icons {
+    padding: 5px;
+    align-self: center;
+    display: grid;
+    grid-area: icon;
+    align-items: start;
+  }
 }
 .page__description .page__box-1 .material-icons {
   background-color: #bbdefb;

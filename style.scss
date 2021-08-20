@@ -1,5 +1,5 @@
 
-//VARIABLES
+//STYLE
 $pageGradient: linear-gradient(to top, #fff, #f1f1fa);
 $colorTopGradient: #e6e8f5;
 $colorBottomGradient: #ffffff;
@@ -10,7 +10,8 @@ $colorBtn: #ffab02;
 $font: Arial, Helvetica, sans-serif ;
 
 //BREAKPOINTS
-$md1: 757.98;
+$md1: 768px;
+$md2: 480px;
 
 * {
     box-sizing: border-box;
@@ -38,6 +39,10 @@ body {
             bottom: 0;
             left: 0;
             background: linear-gradient(to bottom, $colorTopGradient, $colorBottomGradient);
+            @media(max-width: $md2) {
+                width: 53%;
+                height: 85%;
+            }
         }
         &-triangle {
             width: 0;
@@ -48,6 +53,12 @@ body {
             position: absolute;
             top: 0;
             right: 0;
+            @media(max-width: $md1) {
+                border-width: 0 200px 150px 0;                
+            }
+            @media(max-width: $md2) {
+                display: none;                
+            }
         }
         &-circle {
             width: 15%;
@@ -58,6 +69,9 @@ body {
             position: absolute;
             right: 14%;
             top: 38%;
+            @media(max-width: $md2) {
+                display: none;                
+            }
         }
     }
     &__content {
@@ -67,14 +81,24 @@ body {
         width: 100vw;
         height: 100vh;
         padding: 1% 4%;
-        border: solid 2px black;
+        //border: solid 2px black;
+        @media(max-width: $md1) {
+            height: 95%;
+        }
+        @media(max-width: $md2) {
+            display: flex;
+            flex-direction: column;
+        }
         .page__welcome{
             flex-basis: 50%;
             align-self: center;
-            border: solid 1px red;
+            //border: solid 1px red;
             &-tag {
                 color: $colorText;
                 font-size: 1em;
+                @media(max-width: $md1) {
+                    font-size: 0.5em;
+                }
             }
             &-title {
                 color: $colorTitle;
@@ -84,11 +108,17 @@ body {
                 #first {
                     color: $colorTitileFirst;
                 }
+                @media(max-width: $md1) {
+                    font-size: 30px;
+                }
             }
             &-text {
                 color: $colorText;
                 line-height: 1.5em;
                 font-size: 18px;
+                @media(max-width: $md1) {
+                    font-size: 14px;
+                }
             }
             &-btn {
                 color: #fff;
@@ -100,47 +130,102 @@ body {
                 &:hover {
                     cursor: pointer;
                 }
+                @media(max-width: $md1) {
+                    font-size: 13px;
+                    width: 80%;
+                }
+                @media(max-width: $md2) {
+                    font-size: 13px;
+                    width: 100%;
+                }
             }
         }
     }
     &__description {
-        border: solid 1px green;
+        //border: solid 1px green;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         flex-basis: 50%;
         margin-left: 5%;
+        @media(max-width: $md1) {
+            margin-left: 0;
+            display: flex;
+            padding: 0;
+        }
+        @media(max-width: $md2) {
+            margin-top: 5%;
+        }
         ._box {
-            flex-basis: 45%;
+            flex-basis: 40%;
             height: 20%;
             background-color: white;
             border: 1px solid grey;
             border-radius: 2px;
-            margin: 0 10px;
+            margin: 0 13px;
             padding: 20px;
+            @media(max-width: $md1) {
+                flex-basis: 100%;
+                margin-bottom: 2%;
+                display: grid;
+                grid-template-columns: 1fr 9fr;
+                grid-template-rows: auto;
+                grid-template-areas: "icon title"
+                                     "icon text"
+                                      ;
+            }
             .box__title {
                 color: $colorTitle;
                 line-height: 30px;
                 margin-bottom: 2%;
                 margin-top: 3%;
                 font-size: 18px;
+                @media(max-width: $md1) {
+                    font-size: 12px;
+                    padding: 0;
+                    display: grid;
+                    grid-area: "title";
+                    padding: 0;
+                    margin: 0 0 0 10px;                                        
+                }
             }
             .box__text {
                 margin-top: 0;
                 margin-bottom: 0;
                 color: $colorText;
-                font-size: 14px;
+                font-size: 13px;
                 line-height: 20px;
+                @media(max-width: $md1) {
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin: 0 0 0 10px;
+                }
+            }
+            @media(max-width: $md1) {
+                height: auto;
+                padding: 10px;
+                display: grid;
+                grid-area: "text";
             }
         }
 
         ._group2 {
             margin-top: 5%;
+            @media(max-width: $md1) {
+                margin-top: 0;
+            }
         }
 
         .material-icons {
             padding: 10px;
             border-radius: 4px;
+            @media(max-width: $md1) {
+                padding: 5px;
+                align-self: center;
+                display: grid;
+                grid-area: icon;
+                align-items: start;
+            }
         }
         .page__box-1 {
             .material-icons {
