@@ -1,7 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background: linear-gradient(to top, #fff, #f1f1fa);
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
@@ -16,19 +19,19 @@ body {
   height: 100%;
 }
 .page__background-square {
-  width: 35%;
+  width: 33%;
   height: 65%;
-  border-radius: 99% 0 0 0;
+  border-radius: 90% 0 0 0;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to bottom, #eff0f8, #ffffff);
+  background: linear-gradient(to bottom, #e6e8f5, #ffffff);
 }
 .page__background-triangle {
   width: 0;
   height: 0;
-  border-width: 0 400px 250px 0;
-  border-color: transparent #eff0f8 transparent transparent;
+  border-width: 0 400px 300px 0;
+  border-color: transparent #e6e8f5 transparent transparent;
   border-style: solid;
   position: absolute;
   top: 0;
@@ -36,20 +39,21 @@ body {
 }
 .page__background-circle {
   width: 15%;
-  height: 18%;
-  border-radius: 100% 10% 20% 20%;
+  height: 20%;
+  border-radius: 100% 30% 20% 20%;
   transform: rotate(45deg);
-  background-color: #eff0f8;
+  background-color: #e6e8f5;
   position: absolute;
-  right: 15%;
-  top: 30%;
+  right: 14%;
+  top: 38%;
 }
 .page__content {
   position: relative;
   display: flex;
-  width: 95%;
-  height: auto;
-  margin: 2% 2% auto 2%;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 1% 4%;
   border: solid 2px black;
 }
 .page__content .page__welcome {
@@ -58,54 +62,70 @@ body {
   border: solid 1px red;
 }
 .page__content .page__welcome-tag {
-  color: #858fcc;
-  font-size: 12px;
+  color: #4780b9;
+  font-size: 1em;
 }
 .page__content .page__welcome-title {
-  color: #495099;
-  margin-top: 0;
+  color: #182370;
+  margin-top: 10px;
+  font-size: 45px;
+  margin-bottom: 0;
 }
 .page__content .page__welcome-title #first {
-  color: #314efe;
+  color: #284df8;
 }
 .page__content .page__welcome-text {
-  color: #858fcc;
+  color: #4780b9;
+  line-height: 1.5em;
+  font-size: 18px;
 }
 .page__content .page__welcome-btn {
   color: #fff;
   background-color: #ffab02;
   border: none;
-  padding: 8px;
+  padding: 10px;
   border-radius: 4px;
+  font-size: 15px;
 }
 .page__content .page__welcome-btn:hover {
   cursor: pointer;
 }
 .page__description {
+  border: solid 1px green;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   flex-basis: 50%;
+  margin-left: 5%;
 }
 .page__description ._box {
-  height: 180px;
-  width: 230px;
+  flex-basis: 45%;
+  height: 20%;
   background-color: white;
   border: 1px solid grey;
   border-radius: 2px;
-  margin: 10px;
+  margin: 0 10px;
   padding: 20px;
 }
 .page__description ._box .box__title {
-  color: #495099;
+  color: #182370;
   line-height: 30px;
   margin-bottom: 2%;
+  margin-top: 3%;
+  font-size: 18px;
 }
 .page__description ._box .box__text {
   margin-top: 0;
-  color: #858fcc;
+  margin-bottom: 0;
+  color: #4780b9;
+  font-size: 14px;
+  line-height: 20px;
+}
+.page__description ._group2 {
+  margin-top: 5%;
 }
 .page__description .material-icons {
-  padding: 5px;
+  padding: 10px;
   border-radius: 4px;
 }
 .page__description .page__box-1 .material-icons {

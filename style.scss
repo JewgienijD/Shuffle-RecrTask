@@ -1,21 +1,24 @@
 
 //VARIABLES
 $pageGradient: linear-gradient(to top, #fff, #f1f1fa);
-$colorTopGradient: #eff0f8;
+$colorTopGradient: #e6e8f5;
 $colorBottomGradient: #ffffff;
-$colorTitle: #495099;
-$colorTitileFirst: #314efe;
-$colorText: #858fcc;
+$colorTitle: #182370;
+$colorTitileFirst: #284df8;
+$colorText: #4780b9;
 $colorBtn: #ffab02;
-$font: Arial, Helvetica, sans-serif;
+$font: Arial, Helvetica, sans-serif ;
 
 //BREAKPOINTS
 $md1: 757.98;
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background: $pageGradient;
     background-attachment: fixed;
     font-family: $font;
@@ -28,9 +31,9 @@ body {
         width: 100%;
         height: 100%;
         &-square {
-            width: 35%;
+            width: 33%;
             height: 65%;
-            border-radius: 99% 0 0 0;
+            border-radius: 90% 0 0 0;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -39,7 +42,7 @@ body {
         &-triangle {
             width: 0;
 	        height: 0;
-	        border-width: 0 400px 250px 0;
+	        border-width: 0 400px 300px 0;
 	        border-color: transparent $colorTopGradient transparent transparent;
 	        border-style: solid;
             position: absolute;
@@ -48,21 +51,22 @@ body {
         }
         &-circle {
             width: 15%;
-            height: 18%;
-            border-radius: 100% 10% 20% 20%;
+            height: 20%;
+            border-radius: 100% 30% 20% 20%;
             transform: rotate(45deg);
             background-color: $colorTopGradient;
             position: absolute;
-            right: 15%;
-            top: 30%;
+            right: 14%;
+            top: 38%;
         }
     }
     &__content {
         position: relative;
         display: flex;
-        width: 95%;
-        height: auto;
-        margin: 2% 2% auto 2%;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        padding: 1% 4%;
         border: solid 2px black;
         .page__welcome{
             flex-basis: 50%;
@@ -70,24 +74,29 @@ body {
             border: solid 1px red;
             &-tag {
                 color: $colorText;
-                font-size: 12px;
+                font-size: 1em;
             }
             &-title {
                 color: $colorTitle;
-                margin-top: 0;
+                margin-top: 10px;
+                font-size: 45px;
+                margin-bottom: 0;
                 #first {
                     color: $colorTitileFirst;
                 }
             }
             &-text {
                 color: $colorText;
+                line-height: 1.5em;
+                font-size: 18px;
             }
             &-btn {
                 color: #fff;
                 background-color: $colorBtn;
                 border: none;
-                padding: 8px;
+                padding: 10px;
                 border-radius: 4px;
+                font-size: 15px;
                 &:hover {
                     cursor: pointer;
                 }
@@ -95,29 +104,42 @@ body {
         }
     }
     &__description {
+        border: solid 1px green;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         flex-basis: 50%;
+        margin-left: 5%;
         ._box {
-            height: 180px;
-            width: 230px;
+            flex-basis: 45%;
+            height: 20%;
             background-color: white;
             border: 1px solid grey;
             border-radius: 2px;
-            margin: 10px;
+            margin: 0 10px;
             padding: 20px;
             .box__title {
                 color: $colorTitle;
                 line-height: 30px;
                 margin-bottom: 2%;
+                margin-top: 3%;
+                font-size: 18px;
             }
             .box__text {
                 margin-top: 0;
+                margin-bottom: 0;
                 color: $colorText;
+                font-size: 14px;
+                line-height: 20px;
             }
         }
+
+        ._group2 {
+            margin-top: 5%;
+        }
+
         .material-icons {
-            padding: 5px;
+            padding: 10px;
             border-radius: 4px;
         }
         .page__box-1 {
